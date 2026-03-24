@@ -23,7 +23,7 @@
 
 嵌入到封面卡片中的效果示例（自动铺满无留白）：
 
-![](assets/demo/demo_card_embed_example.png)
+![](assets/demo/demo_card_embed_cyber_dark.png)
 
 ## 目录说明
 - `SKILL.md`：Skill 工作流与卡片规范（包含“先选风格”与“满铺无留白”要求）
