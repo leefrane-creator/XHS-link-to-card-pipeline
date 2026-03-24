@@ -1,0 +1,7 @@
+interface:
+  display_name: "XHS Link → Cards"
+  short_description: "Link/Markdown → SVG/PNG cards + XHS copy"
+  default_prompt: "Use $xhs-link-to-card-pipeline to turn this link (or local Markdown) into a publish-ready XHS asset pack (summary, SVG/PNG plan, and copy)."
+
+policy:
+  allow_implicit_invocation: true
