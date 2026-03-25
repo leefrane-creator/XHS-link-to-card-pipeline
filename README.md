@@ -38,3 +38,20 @@ powershell -ExecutionPolicy Bypass -File scripts/convert_svg_to_png.ps1
 ```
 
 默认输出到 `png_output/`。
+
+## 验收与排错（新增）
+导出脚本内置验收，会自动检查：
+- 尺寸是否为 `1242x1660`
+- 四角像素是否一致（边缘与背景一致）
+- 是否存在右侧/底部极端边带（白边/黑边断层）
+
+如只做验收（不重新导出）：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/convert_svg_to_png.ps1 -InputDir output/svg -OutputDir output/png_poster -ValidationOnly
+```
+
+如仍发现边缘断层，优先检查：
+- SVG 是否首层有满铺背景 `rect`
+- 画布是否严格 `1242x1660`
+- 是否误用了 `contain` 导致 letterbox
